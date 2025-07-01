@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import HomeCardsContext from "../Context/HomeCardsContext";
 
-const Filter = ({ onFilter }) => {
+const Filter = () => {
+  const { setfilterValue } = useContext(HomeCardsContext);
   const [filter, setFilter] = useState("high");
 
   const handleFilterClick = () => {
-    onFilter(filter);
+    setfilterValue(filter);
   };
 
   return (

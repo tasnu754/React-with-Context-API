@@ -8,6 +8,7 @@ export const HomeCardsContextProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [searchQuery, setsearchQuery] = useState("");
+  const [filterValue, setfilterValue] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,7 +31,15 @@ export const HomeCardsContextProvider = ({ children }) => {
 
   return (
     <HomeCardsContext.Provider
-      value={{ cards, loading, error, searchQuery, setsearchQuery }}
+      value={{
+        cards,
+        loading,
+        error,
+        searchQuery,
+        setsearchQuery,
+        filterValue,
+        setfilterValue,
+      }}
     >
       {children}
     </HomeCardsContext.Provider>

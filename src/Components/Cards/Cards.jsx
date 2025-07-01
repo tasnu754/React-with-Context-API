@@ -5,11 +5,18 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 
 const Cards = () => {
-  const { cards, loading, error, searchQuery } = useContext(HomeCardsContext);
+  const { cards, loading, error, searchQuery, filterValue } =
+    useContext(HomeCardsContext);
 
-  const filteredCards = cards.filter((card) =>
+  let filteredCards = cards.filter((card) =>
     card.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  if (filterValue == "low") {
+    filteredCards = filteredCards.sort((a, b) => a.price - b.price);
+  } else if (filterValue == "high") {
+    filteredCards = filteredCards.sort((a, b) => b.price - a.price);
+  }
 
   if (loading)
     return (
