@@ -1,0 +1,53 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Modern Wooden Chair",
+      "image": "https://via.placeholder.com/300x200",
+      "shortDescription": "Elegant wooden chair",
+      "description": "A handcrafted wooden chair made with sustainable oak wood, designed to bring a touch of elegance and comfort to your living space. Perfect for both modern and traditional interiors.",
+      "price": 89.99
+    },
+    {
+      "id": 2,
+      "title": "Wireless Bluetooth Headphones",
+      "image": "https://via.placeholder.com/300x200",
+      "shortDescription": "Noise-cancelling headphones",
+      "description": "Experience immersive sound with our latest wireless Bluetooth headphones, featuring active noise cancellation, 40-hour battery life, and ultra-soft ear cushions for long-lasting comfort.",
+      "price": 129.99
+    },
+    {
+      "id": 3,
+      "title": "Stainless Steel Water Bottle",
+      "image": "https://via.placeholder.com/300x200",
+      "shortDescription": "Keeps drinks cold/hot",
+      "description": "This double-walled stainless steel water bottle keeps your beverages cold for up to 24 hours and hot for up to 12. It's leakproof, BPA-free, and ideal for work, travel, or workouts.",
+      "price": 24.99
+    },
+    {
+      "id": 4,
+      "title": "Minimalist Wall Clock",
+      "image": "https://via.placeholder.com/300x200",
+      "shortDescription": "Silent modern clock",
+      "description": "A sleek and minimalist wall clock designed with a noiseless quartz mechanism. Its matte black frame and simple numeric design make it a stylish addition to any room.",
+      "price": 39.99
+    },
+    {
+      "id": 5,
+      "title": "Luxury Cotton Bedsheet Set",
+      "image": "https://via.placeholder.com/300x200",
+      "shortDescription": "4-piece cotton bedsheet",
+      "description": "Upgrade your sleep with our premium 100% cotton bedsheet set, featuring a soft sateen finish. Includes 1 flat sheet, 1 fitted sheet, and 2 pillowcases. Breathable, durable, and machine washable.",
+      "price": 59.99
+    },
+    {
+      "id": 6,
+      "title": "Ergonomic Office Chair",
+      "image": "https://via.placeholder.com/300x200",
+      "shortDescription": "Comfortable work chair",
+      "description": "Designed for productivity and comfort, this ergonomic office chair includes lumbar support, a breathable mesh back, and adjustable height and tilt settings. Ideal for long work hours.",
+      "price": 199.99
+    }
+  ],
+  "cart": []
+}
