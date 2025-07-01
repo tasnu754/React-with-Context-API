@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import HomeCardsContext from "../Context/HomeCardsContext";
 
-const SearchBar = ({ onSearch }) => {
-  const [query, setQuery] = useState("");
+const SearchBar = () => {
+  const { setsearchQuery } = useContext(HomeCardsContext);
+  const [value, setvalue] = useState("");
 
   const handleSearch = () => {
-    onSearch(query);
+    setsearchQuery(value);
   };
 
   return (
@@ -13,8 +15,8 @@ const SearchBar = ({ onSearch }) => {
         <input
           type="text"
           placeholder="Search Item"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          value={value}
+          onChange={(e) => setvalue(e.target.value)}
           className="w-full px-4 py-2 text-gray-700 border-r outline-none"
         />
         <button

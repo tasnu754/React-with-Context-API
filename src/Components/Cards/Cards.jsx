@@ -5,9 +5,11 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 
 const Cards = () => {
-  const { cards, loading, error } = useContext(HomeCardsContext);
+  const { cards, loading, error, searchQuery } = useContext(HomeCardsContext);
 
-  // console.log(cards);
+  const filteredCards = cards.filter((card) =>
+    card.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   if (loading)
     return (
@@ -26,7 +28,7 @@ const Cards = () => {
     );
   return (
     <div className="w-[85%] mx-auto m-10 mt-20 grid grid-cols-3 gap-5">
-      {cards.map((card) => (
+      {filteredCards.map((card) => (
         <SingleCard card={card}></SingleCard>
       ))}
     </div>
