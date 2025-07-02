@@ -2,9 +2,18 @@ import { useContext } from "react";
 import CartsContext from "../Context/CartsContext";
 
 const CartsTable = () => {
-  const { carts } = useContext(CartsContext);
+  const { carts, fetchData } = useContext(CartsContext);
 
-  const handleRemove = () => {};
+  const handleRemove = async (id) => {
+    try {
+      await fetch(`http://localhost:3000/cart/${id}`, {
+        method: "DELETE",
+      });
+      fetchData();
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="overflow-x-auto  shadow-lg border border-gray-200">
       <table className="min-w-full bg-white  overflow-hidden">

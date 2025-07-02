@@ -13,6 +13,7 @@ import KeyboardCommandKeyIcon from "@mui/icons-material/KeyboardCommandKey";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Badge from "@mui/material/Badge";
 import { NavLink } from "react-router";
+import CartsContext from "../Context/CartsContext";
 
 const pages = [
   {
@@ -24,10 +25,12 @@ const pages = [
     path: "/about",
   },
 ];
-const cartItemCount = 3;
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const { carts } = React.useContext(CartsContext);
+
+  const cartItemCount = carts.length;
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
