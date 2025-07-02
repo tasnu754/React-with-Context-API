@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import KeyboardCommandKeyIcon from "@mui/icons-material/KeyboardCommandKey";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Badge from "@mui/material/Badge";
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 import CartsContext from "../Context/CartsContext";
 
 const pages = [
@@ -78,7 +78,7 @@ function Navbar() {
               color="inherit"
             >
               <MenuIcon />
-            </IconButton> 
+            </IconButton>
             <Menu
               anchorEl={anchorElNav}
               open={Boolean(anchorElNav)}
@@ -86,7 +86,7 @@ function Navbar() {
               sx={{ display: { xs: "block", md: "none" } }}
             >
               {[...pages, "Cart"].map((page) => (
-                <NavLink  to={page.path}>
+                <NavLink to={page.path}>
                   <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{page.name}</Typography>
                   </MenuItem>
