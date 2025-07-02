@@ -4,11 +4,13 @@ import Layout from "../Pages/Layout";
 import About from "../Pages/About";
 import Carts from "../Pages/Carts";
 import ProductDetails from "../Pages/ProductDetails";
+import NotFoundPage from "../Pages/NotFoundPage";
 
 export const rootRouter = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
+    errorElement: <NotFoundPage></NotFoundPage>,
     children: [
       {
         path: "",

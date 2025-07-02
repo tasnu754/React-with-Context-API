@@ -7,7 +7,6 @@ const ProductDetails = () => {
   const { id } = useParams();
 
   const data = cards.find((card) => card.id == id);
-  console.log(cards, data, id);
 
   return (
     <div className="max-w-6xl mx-auto mt-20 p-6 grid md:grid-cols-2 gap-10 items-center">

@@ -34,7 +34,7 @@ const Cards = () => {
       </p>
     );
   return (
-    <div className="w-[85%] mx-auto m-10 mt-20 grid grid-cols-3 gap-5">
+    <div className="w-[85%] mx-auto m-10 mt-20 grid md:grid-cols-3 gap-5">
       {filteredCards.map((card) => (
         <SingleCard card={card}></SingleCard>
       ))}

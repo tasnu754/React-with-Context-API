@@ -13,7 +13,7 @@ export const HomeCardsContextProvider = ({ children }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:3001/products");
+        const res = await fetch("http://localhost:3000/products");
 
         if (!res.ok) throw new Error("Failed to load data");
         const data = await res.json();

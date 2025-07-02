@@ -5,7 +5,7 @@ import Searchbar from "../Components/Searchbar/Searchbar";
 const Home = () => {
   return (
     <>
-      <div className="flex justify-evenly ">
+      <div className="md:flex justify-evenly ">
         <Searchbar></Searchbar>
         <Filter></Filter>
       </div>

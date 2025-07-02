@@ -10,7 +10,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="flex justify-center items-center mt-10">
+    <div className="flex justify-center items-center mt-10 mx-2">
       <div className="flex w-full max-w-md shadow-md rounded-lg overflow-hidden">
         <input
           type="text"

@@ -10,7 +10,7 @@ const Filter = () => {
   };
 
   return (
-    <div className="flex gap-2 w-full sm:w-1/2 mt-10">
+    <div className="flex gap-2 justify-center w-full sm:w-1/2 mt-10 mx-2">
       <select
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
