@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import KeyboardCommandKeyIcon from "@mui/icons-material/KeyboardCommandKey";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Badge from "@mui/material/Badge";
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 import CartsContext from "../Context/CartsContext";
 
 const pages = [
