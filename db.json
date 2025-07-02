@@ -49,5 +49,24 @@
       "price": 199.99
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "5",
+      "title": "Luxury Cotton Bedsheet Set",
+      "image": "https://lmg.com.sg/wp-content/uploads/2020/12/Bedsheet-w-Logo.png",
+      "shortDescription": "4-piece cotton bedsheet",
+      "description": "Upgrade your sleep with our premium 100% cotton bedsheet set, featuring a soft sateen finish. Includes 1 flat sheet, 1 fitted sheet, and 2 pillowcases. Breathable, durable, and machine washable.",
+      "price": 59.99,
+      "quantity": 1
+    },
+    {
+      "id": "2",
+      "title": "Wireless Bluetooth Headphones",
+      "image": "https://primebazar.com/public/uploads/all/9FNa4Lha3n2rpe58dlS1VDNgGuzpzZATp3Ijx9Ek.png",
+      "shortDescription": "Noise-cancelling headphones",
+      "description": "Experience immersive sound with our latest wireless Bluetooth headphones, featuring active noise cancellation, 40-hour battery life, and ultra-soft ear cushions for long-lasting comfort.",
+      "price": 129.99,
+      "quantity": 1
+    }
+  ]
 }
