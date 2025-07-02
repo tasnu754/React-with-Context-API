@@ -1,7 +1,7 @@
 import { CartsContextProvider } from "../Components/Context/CartsContext";
 import { HomeCardsContextProvider } from "../Components/Context/HomeCardsContext";
 import Navbar from "../Components/Navbar/Navbar";
-import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router";
 
 const Layout = () => {
   return (

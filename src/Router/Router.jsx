@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router";
 import Home from "../Pages/Home";
 import Layout from "../Pages/Layout";
 import About from "../Pages/About";
@@ -13,19 +13,19 @@ export const rootRouter = createBrowserRouter([
     errorElement: <NotFoundPage></NotFoundPage>,
     children: [
       {
-        path: "",
+        path: "/",
         element: <Home></Home>,
       },
       {
-        path: "about",
+        path: "/about",
         element: <About></About>,
       },
       {
-        path: "carts",
+        path: "/carts",
         element: <Carts></Carts>,
       },
       {
-        path: "product/:id",
+        path: "/product/:id",
         element: <ProductDetails></ProductDetails>,
       },
     ],
