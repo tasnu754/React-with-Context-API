@@ -19,18 +19,15 @@ export default function SingleCard({ card }) {
     const itemExist = carts.find((cart) => cart.id == addCart.id);
     if (itemExist) {
       try {
-        await fetch(
-          `https://react-with-context-api-1.onrender.com/cart/${addCart.id}`,
-          {
-            method: "PATCH",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              quantity: itemExist.quantity + 1,
-            }),
-          }
-        );
+        await fetch(`/api/cart/${addCart.id}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            quantity: itemExist.quantity + 1,
+          }),
+        });
         Swal.fire({
           title: "Item Added",
           text: "Check the Carts page!",
@@ -43,7 +40,7 @@ export default function SingleCard({ card }) {
       const newItem = { ...addCart, quantity: 1 };
 
       try {
-        await fetch("https://react-with-context-api-1.onrender.com/cart", {
+        await fetch("/api/cart", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

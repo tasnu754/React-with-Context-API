@@ -10,9 +10,7 @@ export const CartsContextProvider = ({ children }) => {
 
   const fetchData = async () => {
     try {
-      const res = await fetch(
-        "https://react-with-context-api-1.onrender.com/cart"
-      );
+      const res = await fetch("/api/cart");
 
       if (!res.ok) throw new Error("Failed to load data");
       const data = await res.json();

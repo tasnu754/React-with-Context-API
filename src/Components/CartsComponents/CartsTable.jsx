@@ -6,7 +6,7 @@ const CartsTable = () => {
 
   const handleRemove = async (id) => {
     try {
-      await fetch(`https://react-with-context-api-1.onrender.com/cart/${id}`, {
+      await fetch(`/api/cart/${id}`, {
         method: "DELETE",
       });
       fetchData();
