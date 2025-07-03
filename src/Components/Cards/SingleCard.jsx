@@ -19,7 +19,7 @@ export default function SingleCard({ card }) {
     const itemExist = carts.find((cart) => cart.id == addCart.id);
     if (itemExist) {
       try {
-        await fetch(`http://localhost:3000/cart/${addCart.id}`, {
+        await fetch(`/api/cart/${addCart.id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
@@ -40,7 +40,7 @@ export default function SingleCard({ card }) {
       const newItem = { ...addCart, quantity: 1 };
 
       try {
-        await fetch("http://localhost:3000/cart", {
+        await fetch("/api/cart", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
