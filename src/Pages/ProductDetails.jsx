@@ -18,7 +18,7 @@ const ProductDetails = () => {
     const itemExist = carts.find((cart) => cart.id == addCart.id);
     if (itemExist) {
       try {
-        await fetch(`/api/cart/${addCart.id}`, {
+        await fetch(`http://localhost:3000/cart/${addCart.id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
@@ -39,7 +39,7 @@ const ProductDetails = () => {
       const newItem = { ...addCart, quantity: 1 };
 
       try {
-        await fetch("/api/cart", {
+        await fetch("http://localhost:3000/cart", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

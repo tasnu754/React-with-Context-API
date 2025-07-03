@@ -10,7 +10,7 @@ export const CartsContextProvider = ({ children }) => {
 
   const fetchData = async () => {
     try {
-      const res = await fetch("/api/cart");
+      const res = await fetch("http://localhost:3000/cart");
 
       if (!res.ok) throw new Error("Failed to load data");
       const data = await res.json();
