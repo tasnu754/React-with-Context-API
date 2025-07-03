@@ -43,7 +43,7 @@ export default function SingleCard({ card }) {
       const newItem = { ...addCart, quantity: 1 };
 
       try {
-        await fetch("/api/cart", {
+        await fetch("https://react-with-context-api-1.onrender.com/cart", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
