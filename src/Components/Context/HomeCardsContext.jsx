@@ -13,7 +13,9 @@ export const HomeCardsContextProvider = ({ children }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:3000/products");
+        const res = await fetch(
+          "https://react-with-context-api-1.onrender.com/products"
+        );
 
         if (!res.ok) throw new Error("Failed to load data");
         const data = await res.json();

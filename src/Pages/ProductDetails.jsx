@@ -18,15 +18,18 @@ const ProductDetails = () => {
     const itemExist = carts.find((cart) => cart.id == addCart.id);
     if (itemExist) {
       try {
-        await fetch(`http://localhost:3000/cart/${addCart.id}`, {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            quantity: itemExist.quantity + 1,
-          }),
-        });
+        await fetch(
+          `https://react-with-context-api-1.onrender.com/cart/${addCart.id}`,
+          {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              quantity: itemExist.quantity + 1,
+            }),
+          }
+        );
         Swal.fire({
           title: "Item Added",
           text: "Check the Carts page!",
@@ -39,7 +42,7 @@ const ProductDetails = () => {
       const newItem = { ...addCart, quantity: 1 };
 
       try {
-        await fetch("http://localhost:3000/cart", {
+        await fetch("https://react-with-context-api-1.onrender.com/cart", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
