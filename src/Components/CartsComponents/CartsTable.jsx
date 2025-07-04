@@ -5,7 +5,7 @@ const CartsTable = () => {
   const { carts, setCarts } = useContext(CartsContext);
   console.log(carts);
 
-  const handleRemove = async (id) => {
+  const handleRemove = (id) => {
     const updatedCarts = carts.filter((cart) => cart.id !== id);
     setCarts(updatedCarts);
   };

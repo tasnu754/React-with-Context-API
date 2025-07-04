@@ -12,7 +12,7 @@ import Swal from "sweetalert2";
 export default function SingleCard({ card }) {
   const { carts, setCarts } = useContext(CartsContext);
 
-  const handleAddCart = async (addCart, e) => {
+  const handleAddCart = (addCart, e) => {
     e.stopPropagation();
     e.preventDefault();
 
