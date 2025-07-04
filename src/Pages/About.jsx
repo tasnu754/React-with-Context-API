@@ -17,7 +17,7 @@ const About = () => {
       {/* Mission Section */}
       <section className="grid md:grid-cols-2 gap-8 items-center">
         <img
-          src="https://api.reliasoftware.com/uploads/ecommerce_website_design_2ad8afed1f.png"
+          src="https:/http://localhost:3000.reliasoftware.com/uploads/ecommerce_website_design_2ad8afed1f.png"
           alt="Our Store"
           className="rounded-xl shadow-lg"
         />

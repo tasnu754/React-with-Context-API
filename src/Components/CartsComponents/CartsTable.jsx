@@ -2,17 +2,12 @@ import { useContext } from "react";
 import CartsContext from "../Context/CartsContext";
 
 const CartsTable = () => {
-  const { carts, fetchData } = useContext(CartsContext);
+  const { carts, setCarts } = useContext(CartsContext);
+  console.log(carts);
 
   const handleRemove = async (id) => {
-    try {
-      await fetch(`/api/cart/${id}`, {
-        method: "DELETE",
-      });
-      fetchData();
-    } catch (error) {
-      console.log(error);
-    }
+    const updatedCarts = carts.filter((cart) => cart.id !== id);
+    setCarts(updatedCarts);
   };
   return (
     <div className="overflow-x-auto  shadow-lg border border-gray-200">

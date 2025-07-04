@@ -10,53 +10,30 @@ import CartsContext from "../Context/CartsContext";
 import Swal from "sweetalert2";
 
 export default function SingleCard({ card }) {
-  const { carts, fetchData } = useContext(CartsContext);
+  const { carts, setCarts } = useContext(CartsContext);
 
   const handleAddCart = async (addCart, e) => {
     e.stopPropagation();
     e.preventDefault();
 
     const itemExist = carts.find((cart) => cart.id == addCart.id);
-    if (itemExist) {
-      try {
-        await fetch(`/api/cart/${addCart.id}`, {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            quantity: itemExist.quantity + 1,
-          }),
-        });
-        Swal.fire({
-          title: "Item Added",
-          text: "Check the Carts page!",
-          icon: "success",
-        });
-      } catch (error) {
-        console.error("Failed to update cart item:", error);
-      }
-    } else {
-      const newItem = { ...addCart, quantity: 1 };
+    let updatedCarts;
 
-      try {
-        await fetch("/api/cart", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(newItem),
-        });
-        Swal.fire({
-          title: "Item Added",
-          text: "Check the Carts page!",
-          icon: "success",
-        });
-      } catch (error) {
-        console.error("Failed to add item to cart:", error);
-      }
+    if (itemExist) {
+      updatedCarts = carts.map((cart) =>
+        cart.id === addCart.id ? { ...cart, quantity: cart.quantity + 1 } : cart
+      );
+    } else {
+      updatedCarts = [...carts, { ...addCart, quantity: 1 }];
     }
-    fetchData();
+
+    setCarts(updatedCarts);
+    Swal.fire({
+      title: "Item Added",
+      text: "Check the Carts page!",
+      icon: "success",
+    });
+    console.log(carts);
   };
   return (
     <Link to={`product/${card.id}`}>

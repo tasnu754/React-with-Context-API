@@ -6,7 +6,7 @@ const middlewares = defaults();
 
 server.use(middlewares);
 
-// Handle the /api prefix from Vercel routing
-server.use("/api", router);
+// Handle the http://localhost:3000 prefix from Vercel routing
+server.use("http://localhost:3000", router);
 
 export default server;
